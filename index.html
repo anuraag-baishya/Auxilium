@@ -4,27 +4,48 @@
 	<title>AUXILIUM</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.ico">
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!--
+    ============================================
+    CSS FILES
+    ============================================-->
+    <!--Normalise CSS-->
+    <link rel="stylesheet" type="text/css" href="css/normalise.css">
+    <!--Bootstrap CSS-->
+	<link rel='stylesheet' type="text/css" href="css/bootstrap.min.css">
+    <!--Main Website CSS-->
+    <link rel='stylesheet' type="text/css" href="css/main.css">
+    <!--Word Flip Animation CSS-->
+    <link rel='stylesheet' type="text/css" href="css/anim.css">
+    <!--For General Animations-->
+    <link rel='stylesheet' type="text/css" href="css/animate.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+    <!--
+    ============================================
+    JS FILES
+    ============================================-->
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
+	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-
-	<link rel='stylesheet' type="text/css" href="css/main.css">
-	<link rel='stylesheet' type="text/css" href="css/anim.css">
+    <!--Main Website JS-->
 	<script type="text/javascript" src="js/main.js"></script>
+    <!--For using animate with scroll-->
+    <script type="text/javascript" src=js/wow.min.js></script>
+    <!--For initializing Wow-->
+    <script type="text/javascript">new WOW().init();</script>
 
 </head>
 <body>
 
 	<!--
-	==================================================
+	============================================
 	HEADER SECTION START
-	==================================================-->
+	============================================-->
 
 	<header id="top-bar" class="navbar-fixed-top animated-header">
         <div class="container">
@@ -72,26 +93,26 @@
         </div>
     </header>
     <!--
-	==================================================
+	============================================
 	HEADER SECTION END
-	==================================================-->
+	============================================-->
 
     <!--
-    ==================================================
+    ============================================
     SLIDER SECTION STARTS
-    ==================================================-->
+    ============================================-->
 
 	<section id="slider-section" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="block wow fadeInUp" data-wow-delay=".3s">
+                    <div class="block">
                         
                         <!-- Slider -->
                         <section class="cd-intro">
-                    		<h1>
+                    		<h1  class="wow animated fadeInDown" data-wow-delay=".3s">
                         	<span>Hi, This is Auxilium</span><br>
-							<h1 class="cd-headline rotate-1">
+							<h1 class="cd-headline rotate-1 wow animated slideInLeft" data-wow-delay=".3s">
 								<span>Auxilium can help with</span>
 								<span class="cd-words-wrapper">
 									<b class="is-visible">trade</b>
@@ -101,8 +122,8 @@
                                     <b>promos</b>
 								</span>	
 							</h1>
-							<h3 class="wow fadeInUp animated" data-wow-delay=".6s" >
-                        		Students in universities, especially in their fresher year face a lot of difficulties with respect to finding things they need, learning about places nearby, gathering study material or finding what is going on in and around their campus. Auxilium is being developed keeping these struggles in mind, and the goal in making this app is that no student feels overwhelmed or lost at any point of time.
+							<h3 class="wow animated fadeInUp" data-wow-delay=".3s">
+                        		Students in universities, especially in their fresher year face a lot of difficulties with respect to finding things they need, learning about places nearby, gathering study material or finding what is going on in and around their campus. Auxilium is being developed keeping these struggles in mind, and the goal in making this website is that no student feels overwhelmed or lost at any point of time.
 
                     		</h3>
 						</section>
@@ -112,9 +133,95 @@
         </div>
     </section>
     <!--
-    ==================================================
+    ============================================
     SLIDER SECTION ENDS
-    ==================================================-->
+    ============================================-->
+
+    <!--
+    ============================================
+    MAIN SECTION STARTS
+    ============================================-->
+
+    <section id="main-section">
+        <div class="container service-container">
+            <div class="row row-centered">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-header wow animated fadeInDown" data-wow-delay=".3s">Services</h1>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <figure>
+                    <img class="img-circle img-responsive img-center service-img"src="http://placehold.it/200x200" alt="">
+                    </figure>
+                    <h3>Market</h3>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <img class="img-circle img-responsive img-center service-img"src="http://placehold.it/200x200" alt="">
+                    <h3>B & B</h3>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <img class="img-circle img-responsive img-center service-img"src="http://placehold.it/200x200" alt="">
+                    <h3>Campus</h3>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <img class="img-circle img-responsive img-center service-img"src="http://placehold.it/200x200" alt="">
+                    <h3>Places</h3>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <img class="img-circle img-responsive img-center service-img"src="http://placehold.it/200x200" alt="">
+                    <h3>Promos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    ============================================
+    MAIN SECTION ENDS
+    ============================================-->
+
+    <!--
+    ==================================================
+    Call To Action Section Start
+    ================================================== -->
+    <section id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                        <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--
+    ==================================================
+    Footer Section Start
+    ================================================== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="col-md-8">
+                <a href="http://madewithlove.org.in" target="_blank">Made with <span style="color: #e74c3c">&hearts;</span> in India by Anuraag Baishya and Ishan Jain</a>
+            </div>
+            <div class="col-md-4">
+                <!-- Social Media -->
+                <ul class="social">
+                    <li>
+                        <a href="https://github.com/anuraag-baishya/Auxilium" class="GitHub">
+                            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- /#footer -->
 
 </body>
 </html>
