@@ -68,7 +68,7 @@ a:hover {
   color: #ff5964;
 }
 #slider-section {
-  background: url('images/back.jpg') no-repeat 50%;
+  background: url('../images/back.jpg') no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   padding: 250px 0;
