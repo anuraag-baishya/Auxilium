@@ -16,6 +16,17 @@ jQuery(document).ready(function($){
 	
 	initHeadline();
 	
+	$('.contact-form form input[type="text"], .contact-form form textarea').on('focus', function() {
+		$('.contact-form form input[type="text"], .contact-form form textarea').removeClass('input-error');
+	});
+	$('.myForm').submit(function(e) {
+		e.preventDefault();
+	    var postdata = $('.myForm').serialize();
+	    emailjs.send("gmail", "template_X6PYJgC6",
+	    	{"email": $('#contact-email').val(),
+	    	"subject": $('#contact-subject').val(),
+	    	"message": $('#contact-message').val()});
+	});
 
 	function initHeadline() {
 		//insert <i> element for each letter of a changing word
@@ -251,3 +262,14 @@ $(function() {
     	return re.test(email);
 	}
 });
+
+// <script type="text/javascript">
+// $(function() {
+//   $('form').submit(function(){
+//     $.post('http://example.com/', function() {
+//       window.location = 'index.html';
+//     });
+//     return false;
+//   });
+// });
+// </script>

@@ -11,7 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="form-elements.css">
+	<link rel="stylesheet" href="css/form-elements.css">
 	<link rel="stylesheet" type="text/css" href="css/form-style.css">
 
     <!--Javascript-->
@@ -25,8 +25,8 @@
     <script type="text/javascript" src=js/wow.min.js></script>
     <!--For initializing Wow-->
     <script type="text/javascript">new WOW().init();</script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script src="js/retina-1.1.0.min.js"></script>
-    <script src="js/scripts.js"></script>
 
 </head>
 
@@ -104,7 +104,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom contact-form">
-			                    <form action="index.html">
+			                    <form class="myForm">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="contact-email">Email</label>
 			                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
@@ -127,5 +127,11 @@
             
         </div>
     </section>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_NpVJ5Ddd6Z3QKHtzR60u4");
+            })();
+    </script>
 </body>
 </html>
