@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AUXILIUM</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.ico">
+	<!--
+    ============================================
+    CSS FILES
+    ============================================-->
+    <!--Normalise CSS-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalise.css">
+    <!--Bootstrap CSS-->
+	<link rel='stylesheet' type="text/css" href="stylesheets/bootstrap.min.css">
+    <!--Main Website CSS-->
+    <link rel='stylesheet' type="text/css" href="stylesheets/main.css">
+    <!--For General Animations-->
+    <link rel='stylesheet' type="text/css" href="stylesheets/animate.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.css">
+
+    <!--
+    ============================================
+    JS FILES
+    ============================================-->
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="javascripts/bootstrap.min.js"></script>
+    <!--Main Website JS-->
+	<script type="text/javascript" src="javascripts/main.js"></script>
+    <!--For using animate with scroll-->
+    <script type="text/javascript" src=javascripts/wow.min.js></script>
+    <!--For initializing Wow-->
+    <script type="text/javascript">new WOW().init();</script>
+
+</head>
+<body>
+
+	<!--
+	============================================
+	HEADER SECTION START
+	============================================-->
+
+	<header id="top-bar" class="navbar-fixed-top animated-header">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
+                
+                <!-- logo -->
+                <div class="navbar-brand">
+                    <a href="index" >
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- /logo -->
+            </div>
+            <!-- main menu -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <div class="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index" >Home</a>
+                        </li>
+                        <li><a href="about">About</a></li>
+                        <li class="dropdown">
+    						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+    						<ul class="dropdown-menu">
+    							<li><a href="market">B&B</a></li>
+      							<li><a href="market">Market</a></li>
+     	 						<li><a href="market">Campus News</a></li>
+      							<li><a href="market">Nearby Places</a></li>
+      							<li><a href="market">Promotions</a></li> 
+    						</ul>
+  						</li>
+                        <li><a href="contact">Contact</a></li>
+                        <li data-toggle="modal" data-target="#login-modal"><a href="#">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /main nav -->
+        </div>
+    </div>
+    </header>
+
+    <!--Login Modal-->
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img id="img_logo" src="favicon.ico">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="fa fa-arrow-right"></div>
+                                <span id="text-login-msg">Type your username and password.</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="login-btn btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="fa fa-arrow-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mai"l required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="login-btn btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="fa fa-arrow-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="login-btn btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+            </div>
+        </div>
+    </div>
+    <!--
+	============================================
+	HEADER SECTION END
+	============================================-->
+
+    <!--
+    ============================================
+    SLIDER SECTION STARTS
+    ============================================-->
+
+	<section id="slider-section" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="block">
+                        
+                        <!-- Slider -->
+                        <section class="cd-intro">
+                    		<h1  class="wow animated fadeInDown" data-wow-delay=".3s">
+                        	<span>Hi, This is Auxilium</span><br>
+							<h1 class="cd-headline rotate-1 wow animated slideInLeft" data-wow-delay=".3s">
+								<span>Auxilium can help with</span>
+								<span class="cd-words-wrapper">
+									<b class="is-visible">trade</b>
+									<b>events</b>
+									<b>places</b>
+                                    <b>b and b</b>
+                                    <b>promos</b>
+								</span>	
+							</h1>
+							<h3 class="wow animated fadeInUp" data-wow-delay=".3s">
+                        		Students in universities, especially in their fresher year face a lot of difficulties with respect to finding things they need, learning about places nearby, gathering study material or finding what is going on in and around their campus. Auxilium is being developed keeping these struggles in mind, and the goal in making this website is that no student feels overwhelmed or lost at any point of time.
+
+                    		</h3>
+						</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+    ============================================
+    SLIDER SECTION ENDS
+    ============================================-->
+
+    <!--
+    ============================================
+    MAIN SECTION STARTS
+    ============================================-->
+
+    <section id="main-section">
+        <div class="container service-container">
+            <div class="row row-centered">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-header wow animated fadeInDown" data-wow-delay=".3s">Services</h1>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <figure>
+                    <a href="market"><img class="img-circle img-responsive img-center service-img"src="images/market.jpg" alt=""></a>
+                    </figure>
+                    <h3>Market</h3>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInRight">
+                    <a href="market"><img class="img-circle img-responsive img-center service-img"src="images/bnb.jpg" alt=""></a>
+                    <h3>B & B</h3>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <a href="market"><img class="img-circle img-responsive img-center service-img"src="images/campus.jpg" alt=""></a>
+                    <h3>Campus</h3>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInLeft">
+                    <a href="market"><img class="img-circle img-responsive img-center service-img"src="images/places.jpg" alt=""></a>
+                    <h3>Places</h3>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-centered service wow animated slideInRight">
+                    <a href="market"><img class="img-circle img-responsive img-center service-img"src="images/coupon.jpg" alt=""></a>
+                    <h3>Promos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    ============================================
+    MAIN SECTION ENDS
+    ============================================-->
+
+    <!--
+    ==================================================
+    Call To Action Section Start
+    ================================================== -->
+    <section id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">HELP US IMPROVE</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">If you have anyfeedback regarding
+                        Auxilium,<br>Regarding any of the services, UI, UX or any other aspect</p>
+                        <a href="contact" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--
+    ==================================================
+    Footer Section Start
+    ================================================== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row row-centered wow animated fadeInDown" style="margin-bottom: 2%">
+                <h3>Powered By:</h3>
+                <hr>
+                <div class="col-lg-10 col-sm-6 col-centered service">
+                    <img class="img-responsive img-center service-img"src="images/bootstrap.png" alt="">
+                    <img class="img-responsive img-center service-img"src="images/animate.png" alt="">
+                    <img class="img-responsive img-center service-img"src="images/node.png" alt="">
+                    <img class="img-responsive img-center service-img"src="images/mongo.png" alt="">
+                    <img class="img-responsive img-center service-img"src="images/mongoose.png" alt="">
+                    <img class="img-responsive img-center service-img"src="images/jquery.png" alt="">
+                </div>
+            </div>
+            <div class="row row-centered wow animated fadeInDown" style="margin-bottom: 2%">
+                <div class="col-lg-10 col-sm-6 col-centered service">
+                    <img class="img-responsive img-center service-img" src="http://forthebadge.com/images/badges/uses-html.svg">
+                    <img class="img-responsive img-center service-img" src="http://forthebadge.com/images/badges/uses-css.svg">
+                    <img class="img-responsive img-center service-img" src="http://forthebadge.com/images/badges/uses-js.svg">
+                    <img class="img-responsive img-center service-img" src="http://forthebadge.com/images/badges/uses-git.svg">
+                    <img class="img-responsive img-center service-img" src="http://forthebadge.com/images/badges/uses-badges.svg">
+                </div>
+            </div>
+            <div class="wow animated slideInLeft col-md-8" style="margin-top: 1%">
+                <a href="http://madewithlove.org.in" target="_blank">Made with <span style="color: #e74c3c!important">&hearts;</span> in India by Anuraag Baishya and Ishan Jain</a>
+            </div>
+            <div class="col-md-4 wow animated slideInRight">
+                <!-- Social Media -->
+                <ul class="social">
+                    <li>
+                        <a href="https://github.com/anuraag-baishya/Auxilium" class="GitHub">
+                            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- /#footer -->
+
+</body>
+</html>
