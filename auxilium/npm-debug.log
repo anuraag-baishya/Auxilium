@@ -7,7 +7,7 @@
 6 silly lifecycle auxilium@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle auxilium@0.0.0~start: auxilium@0.0.0
 8 verbose lifecycle auxilium@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle auxilium@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/anuraag/Documents/Projects/Auxilium/auxilium/node_modules/.bin:/usr/local/bin:/home/anuraag/.rbenv/plugins/ruby-build/bin:/home/anuraag/.rbenv/shims:/home/anuraag/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+9 verbose lifecycle auxilium@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/anuraag/Documents/Projects/Auxilium/auxilium/node_modules/.bin:/usr/local/bin:/home/anuraag/.rbenv/plugins/ruby-build/bin:/home/anuraag/.rbenv/shims:/home/anuraag/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:’/opt/sqlmap’:/home/anuraag/Documents/Projects/Scripts:/home/anuraag/Documents/Projects/Scripts/mist_pres:/home/anuraag/Documents/Projects/Scripts/Shell:/home/anuraag/bin:/usr/lib/oracle/12.1/client64/bin:/home/anuraag/.rbenv/shims/ruby
 10 verbose lifecycle auxilium@0.0.0~start: CWD: /home/anuraag/Documents/Projects/Auxilium/auxilium
 11 silly lifecycle auxilium@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle auxilium@0.0.0~start: Returned: code: 1  signal: null
@@ -24,7 +24,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid auxilium@0.0.0
 16 verbose cwd /home/anuraag/Documents/Projects/Auxilium/auxilium
-17 error Linux 4.4.0-45-generic
+17 error Linux 4.4.0-47-generic
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v5.10.1
 20 error npm  v3.8.3

@@ -211,6 +211,11 @@ $(function() {
                 }
                 else {
                     msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "fa-check", "Registration Successful");
+					$.ajax({url: 'register', success:function(res){
+        				alert("Registered");
+    				}, error:function(res){
+    					alert("Error");
+    				}});
                 }
                 return false;
                 break;
