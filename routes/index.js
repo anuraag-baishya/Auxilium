@@ -143,7 +143,7 @@ router.get('/market-add',function(req, res, next){
 });
 router.post('/login', function(req,res,next){
     var obj = req.body;  
-    //console.log(obj);
+
     flag=0;
     db.serialize(function(){
       var username=obj["lg_username"];
@@ -152,29 +152,17 @@ router.post('/login', function(req,res,next){
       var hashed = crypto.createHash('md5').update(password).digest('hex');
       db.each("SELECT * FROM REGISTERED", function(err, row) {
        
-          if((row.username==username)&&(row.password==hashed))
-          {
+          if((row.username==username)&&(row.password==hashed)){
+            
             console.log(row.username + ": " + hashed + ":");
             res.contentType('application/json');
             return res.send({redirect: '/market'});
-          
-          
           } 
-        
-          
-          //res.redirect('/market');
-          //next();
-     
-      });
+      
+        });
     
-      // res.contentType('application/json');
-      // if(flag==1)
-      //   var suc=[{login: '1'}];
-      // else
-      //   var suc=[{login: '0'}];
-      // res.send(suc)
-  });
-      console.log(flag);
+      });
+    console.log(flag);
     
 });
 router.get('/register', function(req, res){
