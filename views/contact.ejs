@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="favicon.ico">
+    <title>Contact</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+	<link rel="stylesheet" href="stylesheets/form-elements.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/form-style.css">
+
+    <!--Javascript-->
+    
+
+    <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="javascripts/bootstrap.min.js"></script>
+    <!--For using animate with scroll-->
+    <script type="text/javascript" src=javascripts/wow.min.js></script>
+    <!--For initializing Wow-->
+    <script type="text/javascript">new WOW().init();</script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+    <script src="javascripts/retina-1.1.0.min.js"></script>
+
+</head>
+
+<body>
+
+		<!--
+	============================================
+	HEADER SECTION START
+	============================================-->
+
+	<header id="top-bar" class="navbar-fixed-top animated-header">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
+                
+                <!-- logo -->
+                <div class="navbar-brand">
+                    <a href="index" >
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- /logo -->
+            </div>
+            <!-- main menu -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <div class="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index" >Home</a>
+                        </li>
+                        <li class="dropdown">
+    						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+    						<ul class="dropdown-menu">
+    							<li><a href="bnb">B&B</a></li>
+                                <li><a href="market">Market</a></li>
+                                <li><a href="campus">Campus News</a></li>
+                                <li><a href="places">Nearby Places</a></li>
+                                <li><a href="promotions">Promotions</a></li> 
+    						</ul>
+  						</li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /main nav -->
+        </div>
+    </header>
+    <!--
+	============================================
+	HEADER SECTION END
+	============================================-->
+        <!-- Top content -->
+    <section id='contact-form'>    
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Contact Us</h3>
+                            		<p>Fill in the form below to send us a message:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-envelope"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom contact-form">
+			                    <form class="myForm">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="contact-email">Email</label>
+			                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="contact-subject">Subject</label>
+			                        	<input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="contact-message">Message</label>
+			                        	<textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+			                        </div>
+			                        <input type="submit" value="Send Message" class="btn"/>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_NpVJ5Ddd6Z3QKHtzR60u4");
+            })();
+    </script>
+</body>
+</html>
