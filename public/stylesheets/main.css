@@ -417,6 +417,7 @@ input[type=email]{
   margin-top: 5%;
   margin-bottom: 5%
 }
+
 #places-main-section{
   position: relative;
   margin-top: 5%;
@@ -492,10 +493,17 @@ ap-canvas{
 .cd-intro {
   margin: 4em auto;
 }
+@media only screen and (max-width: 768px){
+  #promotions-main-section, #bnb-main-section, #market-main-section, #places-main-section{
+    margin-top:15%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .cd-intro {
     margin: 5em auto;
   }
+
 }
 @media only screen and (min-width: 1170px) {
   .cd-intro {
