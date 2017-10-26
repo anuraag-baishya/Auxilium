@@ -43,6 +43,7 @@ a:hover {
 }
 #top-bar .navbar-nav > li > a:hover {
   background: transparent;
+
 }
 #top-bar.animated-header {
   padding: 10px 0;
@@ -66,6 +67,12 @@ a:hover {
 }
 #top-bar .main-menu li a:hover {
   color: #ff3744;
+}
+#top-bar .navbar-header span {
+  background-color: #ff3744;
+}
+#top-bar .navbar-header button {
+  border-color: #ff3744;
 }
 #login-modal .modal-dialog {
     width: 350px;
