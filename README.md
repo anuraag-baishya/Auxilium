@@ -16,7 +16,7 @@ Auxilium uses a number of open source projects to work properly:
 
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [Express] - fast node.js network app framework 
 * [SQLite3](https://sqlite.org/) for database
 * [jQuery] - nothing works without this
 
@@ -25,7 +25,7 @@ Auxilium uses a number of open source projects to work properly:
 Auxilium requires [Node.js](https://nodejs.org/) v4+ to run.
 
 ```sh
-$ git clone [git-repo-url] Auxilium
+$ git clone https://github.com/anuraagbaishya/Auxilium 
 $ cd Auxilium
 $ npm install
 $ npm start
